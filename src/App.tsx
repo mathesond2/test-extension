@@ -1,16 +1,20 @@
 import './App.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { TrackJS } from 'trackjs';
 
 function App() {
+  const [isTracking, setIsTracking] = useState(false);
+
   useEffect(() => {
-    TrackJS.track('another-test');
-  }, []);
+    if (isTracking) {
+      TrackJS.track('another-test');
+    }
+  }, [isTracking]);
 
   return (
     <div className="App">
       <header className="App-header">
-        <p>hello world</p>
+        <button onClick={() => setIsTracking(true)}>hello world</button>
       </header>
     </div>
   );
