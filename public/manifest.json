@@ -1,0 +1,14 @@
+{
+  "name": "My Extension",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_title": "Bitly",
+    "default_popup": "index.html",
+    "default_icon": "icon64.png"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  }
+}
